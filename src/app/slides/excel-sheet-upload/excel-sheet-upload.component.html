@@ -1,0 +1,32 @@
+<div class="w3layouts-main" [ngStyle]="{'background-image': BGImagPath? 'url(' + BGImagPath + ')' : 'none'}">
+    </div>
+    <div class="bannerText">  
+      <div style="text-align:center">
+      <h1>
+        Walmart         
+      <h3>
+        {{ title }}
+      </h3>
+    </h1> 
+    </div>
+    <div style="text-align: center;">
+    <!-- <div style="margin-left: -337px;margin-bottom: 5px;">Please select the file to be upload</div> -->
+    <div class="col-md-12" style="margin-top: 20px;">
+      <div class="col-md-8">
+          <input type="file" id="FileSelect"class="SelectFileBox" accept="xlsx" #ref/>
+    
+      </div>
+      <div class="col-md-2">
+          <button id="uploadBtn" class="UploadBtnStyle" (click)="upload_btn_click(ref.value)">Submit</button>
+   
+        </div>
+    <!-- <input type="file" id="FileSelect"class="SelectFileBox" accept="xlsx" #ref/>
+    <button id="uploadBtn" class="UploadBtnStyle" (click)="upload_btn_click(ref.value)">Submit</button> -->
+   </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    

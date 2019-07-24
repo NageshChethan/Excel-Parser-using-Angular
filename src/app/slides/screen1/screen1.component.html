@@ -1,0 +1,39 @@
+
+<div class="w3layouts-main" [ngStyle]="{'background-image': BGImagPath? 'url(' + BGImagPath + ')' : 'none'}">
+</div>
+<div class="bannerText" [ngStyle]="{'background-image': bannerTextBGPath? 'url(' + bannerTextBGPath + ')' : 'none'}">
+    <div>
+        <div class="col-md-12 hdrsBox">
+            <div class="col-md-4"><span class="hdrlblTxt">Item Id </span></div>
+            <div class="col-md-4"> <span class="hdrlblTxt"> Image</span></div>
+            <div class="col-md-4"><span class="hdrlblTxt">Decision</span></div>
+        </div>
+        <div class="clearFix"></div>
+
+        <div class="col-md-12 rptrDiv" *ngFor="let data of XlData; let i = index">
+                <div class="col-md-4 itemName"> <span class="itemlblTxt">{{data[1]}} </span></div>
+                <div class="col-md-4 itemImgDiv"><img  src={{data[0]}} class="ItemImg" alt={{data[1]}} /> </div>
+                <div class="col-md-4 itemButtons">
+                    <input type="radio" class="rdBtn" name="Decision" value="Yes"/><span class="lblTxt">Yes</span>                                                   
+                    <input type="radio" class="rdBtn" name="Decision" value="yes" /><span class="lblTxt">No</span> 
+                    <!-- <ul>
+                            <li>
+                              <input type="radio" id="f-option" name="selector">
+                              <label for="f-option">Yes</label>                              
+                              <div class="check"></div>
+                            </li>
+                            
+                            <li>
+                              <input type="radio" id="s-option" name="selector">
+                              <label for="s-option">No</label>                              
+                              <div class="check"><div class="inside"></div></div>
+                            </li>                            
+                           
+                    </ul> -->
+                </div>
+                <div class="clear"><br></div>
+        </div>        
+        <div class="clear"><br></div>        
+    </div>
+</div>
+
